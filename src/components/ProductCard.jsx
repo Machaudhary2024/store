@@ -1,4 +1,4 @@
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, onAddToCart }) => {
   return (
     <div className="product-card">
       <div className="product-image">
@@ -10,7 +10,9 @@ const ProductCard = ({ product }) => {
         <p className="product-description">{product.description}</p>
         <div className="product-footer">
           <span className="product-price">${product.price}</span>
-          <button className="btn-add-to-cart">Add to Cart</button>
+          <button className="btn-add-to-cart" onClick={() => onAddToCart(product)}>
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
